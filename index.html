@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Presentation</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -21,6 +21,9 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script src="https://cdn.rawgit.com/knsv/mermaid/0.5.1/dist/mermaid.min.js"></script>
+		<script>mermaid.initialize({startOnLoad:true});</script>
+		
 	</head>
 	<body>
 		<div class="reveal">
@@ -204,6 +207,34 @@
 						</a>
 					</section>
 					
+				</section>
+				<section>
+					<section>
+						<div class="mermaid">
+    							
+							```mermaid
+							graph LR
+							A[Click Run] --Interest--> B[Click Visualize]
+							B --Funnel Drop--> C((Compilation Error))
+							B --Awareness--> E(Click Step over)
+							B --Awareness--> F(Click Bookmark Added)
+							B --Awareness--> G(Click Line Number)
+							B --Awareness--> H(Slider Moved)
+							B --Awareness--> I(Variable Value Observed)
+							B --Funnel Drop--> D((Cancelled)) 
+							E --Engagement--> J(Multiple times Click Step over)
+							F --Engagement--> K(Multiple times Click Bookmark Added)
+							G --Engagement--> L(Multiple times Click Line Number)
+							H --Engagement--> M(Multiple times Slider Moved)
+							I --Engagement--> N(Multiple times Variable Value Observed)
+							J --Empathy --> O[Number of Test Cases Successful]
+							K --Empathy --> O
+							L --Empathy --> O
+							M --Empathy --> O
+							N --Empathy --> O
+							```
+						</div>
+					</section>
 				</section>
 				<section>
 					<p><span style="color: #008000;">Thanks</span></p>
